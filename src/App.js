@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile from './Components/Profile';
+const user = {
+  "username": "Jacques Gluke",
+  "tag": "jgluke",
+  "location": "Ocho Rios, Jamaica",
+  "avatar": "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
+  "stats": {
+    "followers": 5603,
+    "views": 4827,
+    "likes": 1308
+  }
+}
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+    return (
+        <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+        />
+    )
 }
 
 export default App;
